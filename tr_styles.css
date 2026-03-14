@@ -375,7 +375,13 @@ th{
   border: none;
 }
 
-/* Clickable fare pills */
+/* Clickable fare buttons */
+.fare-buttons{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
 .fare-pill{
   margin-right: 8px;
   margin-bottom: 6px;
