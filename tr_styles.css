@@ -120,6 +120,11 @@ section{
   margin-top: 15px;
 }
 
+.welcome-wrap{
+  padding-right: 18px;
+  box-sizing: border-box;
+}
+
 .main-text p {
     color: white;
     font-size: 23px;
