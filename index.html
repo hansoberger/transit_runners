@@ -537,17 +537,46 @@
     document.addEventListener("DOMContentLoaded", () => {
       populateSelect($("#filterRoute"), true);
       populateSelect($("#routeSelect"), false);
-    
+
       $("#filterRoute").value = "ALL";
       $("#routeSelect").value = "R1";
-    
+
       renderBoard();
       buildSchedule();
-    
+
+      $("#filterRoute").addEventListener("change", renderBoard);
+      $("#filterSeverity").addEventListener("change", renderBoard);
+      $("#btnRefresh").addEventListener("click", () => { renderBoard(); tickClock(); });
+
+      $("#routeSelect").addEventListener("change", buildSchedule);
+      $("#dirSelect").addEventListener("change", buildSchedule);
+      $("#daySelect").addEventListener("change", buildSchedule);
+      $("#btnPrint").addEventListener("click", () => window.print());
+      tickClock();
+      setInterval(tickClock, 1000);
+    });
+
+    document.addEventListener("DOMContentLoaded", () => {
+      populateSelect($("#filterRoute"), true);
+      populateSelect($("#routeSelect"), false);
+
+      $("#filterRoute").value = "ALL";
+      $("#routeSelect").value = "R1";
+
+      renderBoard();
+      buildSchedule();
+
       $("#filterRoute")?.addEventListener("change", renderBoard);
       $("#filterSeverity")?.addEventListener("change", renderBoard);
+
+      // Only attach if the button actually exists
+      /* $("#btnRefresh")?.addEventListener("click", () => { renderBoard(); tickClock(); }); */
+
+      // These are the schedule filters (will now reliably attach)
       $("#routeSelect")?.addEventListener("change", buildSchedule);
-    
+      //$("#dirSelect")?.addEventListener("change", buildSchedule);
+     // $("#daySelect")?.addEventListener("change", buildSchedule);
+
       tickClock();
       setInterval(tickClock, 1000);
     });
