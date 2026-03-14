@@ -367,23 +367,15 @@
 
     function buildSchedule(){
       const routeId = $("#routeSelect")?.value;
-      /*const dir = Number($("#dirSelect")?.value);
-      const day = $("#daySelect")?.value;*/
-      /* Default values since selectors were removed */
-      const dir = 0;        // always outbound
       const day = "WEEKDAY";
-
-     /* const r = routes.find(x => x.id === routeId);
-      if(!r) return; */
       const r = routeById(routeId);
-      
-      const stops = (dir === 0) ? r.stops : [...r.stops].reverse();
+      if(!r) return;
+
+      const stops = r.stops;
       const trips = r.timetable?.[day] || [];
       const valid = trips.length > 0 && trips[0] && trips[0][0] !== "—";
 
-      /*$("#scheduleMeta").textContent =
-        `ROUTE ${r.id} ${r.name} // ${dir===0?"OUTBOUND":"INBOUND"} // ${day} // HEADWAY ${r.headways[day]||"—"} // ${r.corridor}`; */
-        $("#scheduleMeta").textContent =
+      $("#scheduleMeta").textContent =
         `ROUTE ${r.id}: ${r.name} // DAILY SERVICE // HEADWAY ${r.headways["WEEKDAY"] || "—"} // ${r.corridor}`;
       
       const table = $("#scheduleTable");
@@ -537,49 +529,21 @@
     document.addEventListener("DOMContentLoaded", () => {
       populateSelect($("#filterRoute"), true);
       populateSelect($("#routeSelect"), false);
-
+    
       $("#filterRoute").value = "ALL";
       $("#routeSelect").value = "R1";
-
+    
       renderBoard();
       buildSchedule();
-
-      $("#filterRoute").addEventListener("change", renderBoard);
-      $("#filterSeverity").addEventListener("change", renderBoard);
-      $("#btnRefresh").addEventListener("click", () => { renderBoard(); tickClock(); });
-
-      $("#routeSelect").addEventListener("change", buildSchedule);
-      $("#dirSelect").addEventListener("change", buildSchedule);
-      $("#daySelect").addEventListener("change", buildSchedule);
-      $("#btnPrint").addEventListener("click", () => window.print());
-      tickClock();
-      setInterval(tickClock, 1000);
-    });
-
-    document.addEventListener("DOMContentLoaded", () => {
-      populateSelect($("#filterRoute"), true);
-      populateSelect($("#routeSelect"), false);
-
-      $("#filterRoute").value = "ALL";
-      $("#routeSelect").value = "R1";
-
-      renderBoard();
-      buildSchedule();
-
+    
       $("#filterRoute")?.addEventListener("change", renderBoard);
       $("#filterSeverity")?.addEventListener("change", renderBoard);
-
-      // Only attach if the button actually exists
-      /* $("#btnRefresh")?.addEventListener("click", () => { renderBoard(); tickClock(); }); */
-
-      // These are the schedule filters (will now reliably attach)
       $("#routeSelect")?.addEventListener("change", buildSchedule);
-      //$("#dirSelect")?.addEventListener("change", buildSchedule);
-     // $("#daySelect")?.addEventListener("change", buildSchedule);
-
+    
       tickClock();
       setInterval(tickClock, 1000);
     });
+
 
   </script>
 
