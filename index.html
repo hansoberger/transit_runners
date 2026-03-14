@@ -521,6 +521,20 @@
       update();
     })();
 
+    function showFareToast(){
+      const toast = document.getElementById("fareToast");
+      if(!toast) return;
+    
+      toast.classList.add("show");
+      toast.setAttribute("aria-hidden", "false");
+    
+      clearTimeout(window.__fareToastTimer);
+      window.__fareToastTimer = setTimeout(() => {
+        toast.classList.remove("show");
+        toast.setAttribute("aria-hidden", "true");
+      }, 1600);
+    }
+
     // Init
 
     document.addEventListener("DOMContentLoaded", () => {
@@ -536,6 +550,17 @@
       $("#filterRoute")?.addEventListener("change", renderBoard);
       $("#filterSeverity")?.addEventListener("change", renderBoard);
       $("#routeSelect")?.addEventListener("change", buildSchedule);
+
+      document.querySelectorAll(".fare-pill").forEach(pill => {
+        pill.addEventListener("click", showFareToast);
+    
+        pill.addEventListener("keydown", (e) => {
+          if(e.key === "Enter" || e.key === " "){
+            e.preventDefault();
+            showFareToast();
+          }
+        });
+      });
     
       tickClock();
       setInterval(tickClock, 1000);
