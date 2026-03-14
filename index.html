@@ -142,7 +142,7 @@
           Tripper Card (reloadable tap) • Transit Runners App (QR scan) • Station Kiosks (credchip) • Cyberware Smart Link
         </p>
         <p class="meta">
-          Keep proof of payment until exit. ADD A CRAZY LORE THING.
+          Keep proof of payment until exit. Fare evaders will be subject to sleep gas and arrest.
         </p>
       </div>
 
@@ -280,13 +280,20 @@
     ];
 
     const alerts = [
-      { routeId:"R5", severity:"DELAY", delayMin:42, title:"PACIFICA COASTER: hijacked bus", body:"Expect 10–15 min delays through City Center Hub due to street closure reroutes.", updatedAt: Date.now() - 7*60*1000 },
-      { routeId:"R2", severity:"ADVISORY", delayMin:0, title:"WESTBROOK CONNECTOR: stop skipped", body:"Kabuki Station (north entrance) closed. Use Kabuki South Gate.", updatedAt: Date.now() - 22*60*1000 },
-      { routeId:"R6", severity:"OK", delayMin:0, title:"CITY CIRCUIT: normal service", body:"High frequency service active. Extra trips inserted for peak.", updatedAt: Date.now() - 4*60*1000 },
-      { routeId:"R1", severity:"ADVISORY", delayMin:3, title:"WATSON WAGON: hostage situation", body:"Security checkpoint causing boarding delays near Waterfront.", updatedAt: Date.now() - 15*60*1000 },
-      { routeId:"R3", severity:"ADVISORY", delayMin:5, title:"BADLANDS BOMBER: dust storm", body:"Express running limited-stop pattern; verify boarding signage.", updatedAt: Date.now() - 31*60*1000 },
-      { routeId:"R7", severity:"OK", delayMin:0, title:"SPACE SHUTTLE: normal service", body:"High frequency service active.", updatedAt: Date.now() - 40*60*1000 },
-      { routeId:"R4", severity:"DELAY", delayMin:60, title:"RANCHO ROCKET: bus breakdown", body:"Suspended route due to low ridership.", updatedAt: Date.now() - 200*60*1000 },
+      { routeId:"R5", severity:"DELAY", delayMin:42, title:"PACIFICA COASTER: hijacked bus", 
+       body:"Bus R52 hacked by Voodoo Boys. Netrunner team in pursuit.", updatedAt: Date.now() - 7*60*1000 },
+      { routeId:"R2", severity:"ADVISORY", delayMin:0, title:"WESTBROOK CONNECTOR: stop skipped", 
+       body:"Silver Pixel stop closed. Use Eurodine stop.", updatedAt: Date.now() - 22*60*1000 },
+      { routeId:"R6", severity:"OK", delayMin:0, title:"CITY CIRCUIT: normal service", 
+       body:"High frequency service active. Extra trips inserted for peak.", updatedAt: Date.now() - 4*60*1000 },
+      { routeId:"R1", severity:"ADVISORY", delayMin:3, title:"WATSON WAGON: hostage situation", 
+       body:"NCPD operation in Northside causing rerouting delays.", updatedAt: Date.now() - 15*60*1000 },
+      { routeId:"R3", severity:"ADVISORY", delayMin:5, title:"BADLANDS BOMBER: dust storm", 
+       body:"Poor visiblity between Sunset and Rocky Ridge stops.", updatedAt: Date.now() - 31*60*1000 },
+      { routeId:"R7", severity:"OK", delayMin:0, title:"MORRO ROCKET: normal service", 
+       body:"High frequency service active.", updatedAt: Date.now() - 40*60*1000 },
+      { routeId:"R4", severity:"DELAY", delayMin:60, title:"RANCHO CORONADO LOOP: bus breakdown", 
+       body:"Bus R41 stranded at Carsten Ave Bridge. Maintenance crew deployed.", updatedAt: Date.now() - 200*60*1000 },
     ];
 
     function routeById(id){ 
