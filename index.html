@@ -369,7 +369,7 @@
       /*$("#scheduleMeta").textContent =
         `ROUTE ${r.id} ${r.name} // ${dir===0?"OUTBOUND":"INBOUND"} // ${day} // HEADWAY ${r.headways[day]||"—"} // ${r.corridor}`; */
         $("#scheduleMeta").textContent =
-        `ROUTE ${r.id} ${r.name} // DAILY SERVICE // HEADWAY ${r.headways["WEEKDAY"] || "—"} // ${r.corridor}`;
+        `ROUTE ${r.id}: ${r.name} // DAILY SERVICE // HEADWAY ${r.headways["WEEKDAY"] || "—"} // ${r.corridor}`;
       
       const table = $("#scheduleTable");
       if(!table) return;
