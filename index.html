@@ -119,9 +119,9 @@
       <h2 id="fares">FARES AND PAYMENT</h2>
       <div class="ui">
         <p>
-          <span class="pill">ONE-WAY: €$ 0.75</span>
-          <span class="pill">DAY PASS: €$ 3.00</span>
-          <span class="pill">MONTHLY: €$ 45.00</span>
+          <span class="pill fare-pill" tabindex="0" role="button">ONE-WAY: €$ 0.75</span>
+          <span class="pill fare-pill" tabindex="0" role="button">DAY PASS: €$ 3.00</span>
+          <span class="pill fare-pill" tabindex="0" role="button">MONTHLY: €$ 45.00</span>
         </p>
         
         <p>
@@ -144,6 +144,10 @@
       <p id="bottom-text">CONNECTING PEOPLE LIKE YOU TO NIGHT CITY</p>
     </section>
   </main>
+
+  <div id="fareToast" class="fare-toast" aria-live="polite" aria-hidden="true">
+    Added to User Device.
+  </div>
 
   <script>
     const $ = (s) => document.querySelector(s);
