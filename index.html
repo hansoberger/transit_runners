@@ -50,7 +50,7 @@
       <div class="welcome-wrap">
         <h2>WELCOME</h2>
         <p>
-          Transit Runners operates seven core bus routes across Night City and surrounding districts.
+          Transit Runners operates seven bus routes across Night City and surrounding districts.
           Use the controls above to check route statuses, browse schedules, view the route map, and learn how to pay fares.
         </p>
       </div>
@@ -87,20 +87,6 @@
         <div class="ui-row">
           <label for="routeSelect">ROUTE</label>
           <select id="routeSelect"></select>
-
-          <!--label for="dirSelect">DIR</label>
-          <select id="dirSelect">
-            <option value="0">OUTBOUND</option>
-            <option value="1">INBOUND</option>
-          </select>
-
-          <label for="daySelect">WINDOW</label>
-          <select id="daySelect">
-            <option value="WEEKDAY">WEEKDAY</option>
-            <option value="WEEKEND">WEEKEND</option>
-            <option value="NIGHT">NIGHT</option>
-          </select> -->
-
         </div>
 
         <div class="meta" id="scheduleMeta"></div>
@@ -281,7 +267,7 @@
 
     const alerts = [
       { routeId:"R5", severity:"DELAY", delayMin:42, title:"PACIFICA COASTER: hijacked bus", 
-       body:"Bus R52 hacked by Voodoo Boys. Netrunner team in pursuit.", updatedAt: Date.now() - 7*60*1000 },
+       body:"Bus 530 hacked by Voodoo Boys. NCPD Netrunner team in pursuit.", updatedAt: Date.now() - 7*60*1000 },
       { routeId:"R2", severity:"ADVISORY", delayMin:0, title:"WESTBROOK CONNECTOR: stop skipped", 
        body:"Silver Pixel stop closed. Use Eurodine stop.", updatedAt: Date.now() - 22*60*1000 },
       { routeId:"R6", severity:"OK", delayMin:0, title:"CITY CIRCUIT: normal service", 
@@ -292,8 +278,8 @@
        body:"Poor visiblity between Sunset and Rocky Ridge stops. Service slowed.", updatedAt: Date.now() - 31*60*1000 },
       { routeId:"R7", severity:"OK", delayMin:0, title:"MORRO ROCKET: normal service", 
        body:"High frequency service active.", updatedAt: Date.now() - 40*60*1000 },
-      { routeId:"R4", severity:"DELAY", delayMin:60, title:"RANCHO CORONADO LOOP: bus breakdown", 
-       body:"Bus R41 stranded at Carsten Ave Bridge. Maintenance crew deployed.", updatedAt: Date.now() - 200*60*1000 },
+      { routeId:"R4", severity:"DELAY", delayMin:60, title:"SANTO DOMINGO LOOP: bus breakdown", 
+       body:"Bus 428 stranded at Carsten Ave Bridge. TR Maintenance crew deployed.", updatedAt: Date.now() - 200*60*1000 },
     ];
 
     function routeById(id){ 
