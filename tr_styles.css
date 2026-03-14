@@ -377,8 +377,11 @@ th{
 
 /* Clickable fare pills */
 .fare-pill{
+  margin-right: 8px;
+  margin-bottom: 6px;
+  display: inline-block;
   cursor: pointer;
-  user-select: none;
+  /*user-select: none;*/
 }
 
 .fare-pill:hover,
@@ -386,6 +389,10 @@ th{
   background: rgb(255, 0, 0);
   color: black;
   outline: none;
+}
+
+.fare-pill:active{
+  transform: translateY(1px);
 }
 
 /* Small cyberpunk message window */
