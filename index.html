@@ -193,7 +193,7 @@
       },
       { id:"R4", name:"SANTO DOMINGO LINE", corridor:"MLK ⇄ Gibson",
         stops:["MLK at Mallagra","Gladstone at Venice","Pheasant at Carson","Woodhaven at Gibson","Carsten at Gibson", "MLK at Mallagra"],
-        headways:{WEEKDAY:"12–14 min", WEEKEND:"18 min", NIGHT:"30 min"},
+        headways:{WEEKDAY:"35-38 min", WEEKEND:"18 min", NIGHT:"30 min"},
         timetable:{
           WEEKDAY:[
                   ["00:00","00:05","00:12","00:19","00:25","00:30"],
@@ -369,7 +369,7 @@
       /*$("#scheduleMeta").textContent =
         `ROUTE ${r.id} ${r.name} // ${dir===0?"OUTBOUND":"INBOUND"} // ${day} // HEADWAY ${r.headways[day]||"—"} // ${r.corridor}`; */
         $("#scheduleMeta").textContent =
-        `ROUTE ${r.id} ${r.name} // WEEKDAY SERVICE // HEADWAY ${r.headways["WEEKDAY"] || "—"} // ${r.corridor}`;
+        `ROUTE ${r.id} ${r.name} // DAILY SERVICE // HEADWAY ${r.headways["WEEKDAY"] || "—"} // ${r.corridor}`;
       
       const table = $("#scheduleTable");
       if(!table) return;
