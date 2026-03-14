@@ -405,7 +405,8 @@
         `<thead>
           <tr>
             <th>STOP</th>
-            ${trips.map((_,i)=>`<th>BUS ${i+1}</th>`).join("")}
+            ${trips.map((_,i)=>`<th>BUS ${r.id.replace("R","")}${i+1}</th>`).join("")}
+
           </tr>
         </thead>
         <tbody>
