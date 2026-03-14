@@ -80,7 +80,7 @@
           <label for="routeSelect">ROUTE</label>
           <select id="routeSelect"></select>
 
-          <label for="dirSelect">DIR</label>
+          <!--label for="dirSelect">DIR</label>
           <select id="dirSelect">
             <option value="0">OUTBOUND</option>
             <option value="1">INBOUND</option>
@@ -91,7 +91,7 @@
             <option value="WEEKDAY">WEEKDAY</option>
             <option value="WEEKEND">WEEKEND</option>
             <option value="NIGHT">NIGHT</option>
-          </select>
+          </select> -->
 
         </div>
 
@@ -352,19 +352,25 @@
 
     function buildSchedule(){
       const routeId = $("#routeSelect")?.value;
-      const dir = Number($("#dirSelect")?.value);
-      const day = $("#daySelect")?.value;
+      /*const dir = Number($("#dirSelect")?.value);
+      const day = $("#daySelect")?.value;*/
+      /* Default values since selectors were removed */
+      const dir = 0;        // always outbound
+      const day = "WEEKDAY";
 
-      const r = routes.find(x => x.id === routeId);
-      if(!r) return;
-
+     /* const r = routes.find(x => x.id === routeId);
+      if(!r) return; */
+      const r = routeById(routeId);
+      
       const stops = (dir === 0) ? r.stops : [...r.stops].reverse();
       const trips = r.timetable?.[day] || [];
       const valid = trips.length > 0 && trips[0] && trips[0][0] !== "—";
 
-      $("#scheduleMeta").textContent =
-        `ROUTE ${r.id} ${r.name} // ${dir===0?"OUTBOUND":"INBOUND"} // ${day} // HEADWAY ${r.headways[day]||"—"} // ${r.corridor}`;
-
+      /*$("#scheduleMeta").textContent =
+        `ROUTE ${r.id} ${r.name} // ${dir===0?"OUTBOUND":"INBOUND"} // ${day} // HEADWAY ${r.headways[day]||"—"} // ${r.corridor}`; */
+        $("#scheduleMeta").textContent =
+        `ROUTE ${r.id} ${r.name} // WEEKDAY SERVICE // HEADWAY ${r.headways["WEEKDAY"] || "—"} // ${r.corridor}`;
+      
       const table = $("#scheduleTable");
       if(!table) return;
 
@@ -544,8 +550,8 @@
 
       // These are the schedule filters (will now reliably attach)
       $("#routeSelect")?.addEventListener("change", buildSchedule);
-      $("#dirSelect")?.addEventListener("change", buildSchedule);
-      $("#daySelect")?.addEventListener("change", buildSchedule);
+      //$("#dirSelect")?.addEventListener("change", buildSchedule);
+     // $("#daySelect")?.addEventListener("change", buildSchedule);
 
       tickClock();
       setInterval(tickClock, 1000);
