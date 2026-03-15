@@ -380,28 +380,27 @@ th{
   display: flex;
   gap: 6px;
   width: 100%;
+  margin: 10px 0;
 }
 
 .fare-pill{
   flex: 1 1 0;
   text-align: center;
   white-space: nowrap;
+
+  font-family: sans-serif;   /* same as audio button */
+  font-weight: 700;          /* matches uiBtn */
+  letter-spacing: 1px;       /* cyberpunk UI spacing */
+
   font-size: 13px;
   padding: 4px 6px;
-  letter-spacing: 0.5px;
   box-sizing: border-box;
-  /*user-select: none;*/
+  cursor: pointer;
 }
 
-.fare-pill:hover,
-.fare-pill:focus{
+.fare-pill:hover{
   background: rgb(255, 0, 0);
   color: black;
-  outline: none;
-}
-
-.fare-pill:active{
-  transform: translateY(1px);
 }
 
 /* Small cyberpunk message window */
