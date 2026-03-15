@@ -390,13 +390,14 @@ th{
   white-space: nowrap;
 
   font-family: sans-serif;   /* same as audio button */
-  font-weight: 700;          /* matches uiBtn */
+  font-weight: 800;          /* matches uiBtn */
   letter-spacing: 1px;       /* cyberpunk UI spacing */
 
   font-size: 13px;
-  padding: 4px 6px;
+  padding: 6px 10px;
   box-sizing: border-box;
 }
+
 
 /* Small cyberpunk message window */
 .fare-toast{
