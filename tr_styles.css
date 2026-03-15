@@ -380,13 +380,13 @@ th{
   display: flex;
   gap: 6px;
   width: 100%;
-  margin: 10px 0;
 }
-
 .fare-pill{
   flex: 1 1 0;
   text-align: center;
   white-space: nowrap;
+  font-size: 13px;
+  padding: 4px 6px;
 }
 
 /* Small cyberpunk message window */
