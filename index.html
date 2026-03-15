@@ -16,6 +16,9 @@
     <div class="header-text">
       <h1>TRANSIT RUNNERS</h1>
       <p>Night City Public Bus Service</p>
+      <div id="fareToast" class="fare-toast">
+        Added to User Device.
+      </div>
     </div>
 
     <!-- header ui -->
@@ -117,12 +120,6 @@
       </div>
 
       <h2 id="fares">FARES AND PAYMENT</h2>
-      <div class="fare-panel">
-
-        <div id="fareToast" class="fare-toast">
-          Added to User Device.
-        </div>
-
       <div class="ui">
         <div class="fare-buttons">
             <span class="uiBtn fare-pill">ONE-WAY: €$ 0.75</span>
@@ -149,10 +146,6 @@
       <p id="bottom-text">CONNECTING PEOPLE LIKE YOU TO NIGHT CITY</p>
     </section>
   </main>
-
-  <div id="fareToast" class="fare-toast" aria-live="polite" aria-hidden="true">
-    Added to User Device.
-  </div>
 
   <script>
     const $ = (s) => document.querySelector(s);
