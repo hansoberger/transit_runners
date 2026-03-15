@@ -395,7 +395,7 @@ th{
   display: flex;
   gap: 6px;
 
-  width: calc(100% - 30px);   /* pulls it away from scrollbar */
+  width: calc(100% - 20px);   /* pulls it away from scrollbar */
   margin: 0 auto;             /* keeps it centered */
 }
 .fare-pill{
