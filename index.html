@@ -255,16 +255,7 @@
           NIGHT:[["21:00","21:20","21:40","22:00","22:20","22:40"],["23:00","23:20","23:40","00:00","00:20","00:40"]],
         }
       },
-      { id:"R6", name:"CITY CIRCUIT", corridor:"Corpo Plaza ⇄ City Center ⇄ Arasaka Tower",
-        stops:["CORPO PLAZA","CITY CENTER HUB","ARASAKA TOWER"],
-        headways:{WEEKDAY:"6–8 min", WEEKEND:"10 min", NIGHT:"—"},
-        timetable:{
-          WEEKDAY:[["06:00","06:08","06:16"],["06:24","06:32","06:40"]],
-          WEEKEND:[["08:00","08:10","08:20"],["09:00","09:10","09:20"]],
-          NIGHT:[["—","—","—"]],
-        }
-      },
-      { id:"R7", name:"MORRO ROCKET", corridor:"Japantown ⇄ Kabuki ⇄ Night Market ⇄ Badlands Gate",
+      { id:"R6", name:"MORRO ROCKET", corridor:"Japantown ⇄ Kabuki ⇄ Night Market ⇄ Badlands Gate",
         stops:["JAPANTOWN","KABUKI","NIGHT MARKET","BADLANDS GATE"],
         headways:{WEEKDAY:"20 min", WEEKEND:"15–20 min", NIGHT:"30 min"},
         timetable:{
@@ -280,13 +271,11 @@
        body:"Bus 530 hacked by Voodoo Boys. NCPD Netrunner team in pursuit.", updatedAt: Date.now() - 7*60*1000 },
       { routeId:"R2", severity:"ADVISORY", delayMin:0, title:"WESTBROOK CONNECTOR: stop skipped", 
        body:"Silver Pixel stop closed. Use Eurodine stop.", updatedAt: Date.now() - 22*60*1000 },
-      { routeId:"R6", severity:"OK", delayMin:0, title:"CITY CIRCUIT: normal service", 
-       body:"High frequency service active. Extra trips inserted for peak.", updatedAt: Date.now() - 4*60*1000 },
       { routeId:"R1", severity:"ADVISORY", delayMin:3, title:"WATSON WAGON: hostage situation", 
        body:"MaxTac operation in Northside. Service rerouted.", updatedAt: Date.now() - 15*60*1000 },
       { routeId:"R3", severity:"ADVISORY", delayMin:5, title:"BADLANDS BOMBER: dust storm", 
        body:"Poor visiblity between Sunset and Rocky Ridge stops. Service slowed.", updatedAt: Date.now() - 31*60*1000 },
-      { routeId:"R7", severity:"OK", delayMin:0, title:"MORRO ROCKET: normal service", 
+      { routeId:"R6", severity:"OK", delayMin:0, title:"MORRO ROCKET: normal service", 
        body:"High frequency service active.", updatedAt: Date.now() - 40*60*1000 },
       { routeId:"R4", severity:"DELAY", delayMin:60, title:"SANTO DOMINGO LOOP: bus breakdown", 
        body:"Bus 428 stranded at Carsten Ave Bridge. TR Maintenance crew deployed.", updatedAt: Date.now() - 200*60*1000 },
