@@ -387,10 +387,6 @@ th{
   flex: 1 1 0;
   text-align: center;
   white-space: nowrap;
-
-  font-size: 16px;
-  letter-spacing: 0.8px;
-  padding: 3px 5px;
 }
 
 /* Small cyberpunk message window */
