@@ -378,15 +378,16 @@ th{
 /* Clickable fare buttons */
 .fare-buttons{
   display: flex;
-  flex-wrap: wrap;
   gap: 10px;
+  width: 100%;
 }
 
 .fare-pill{
-  margin-right: 8px;
-  margin-bottom: 6px;
-  display: inline-block;
-  cursor: pointer;
+  flex: 1;
+  text-align: center;
+  white-space: nowrap;
+  font-size: 15px;
+  padding: 6px 8px;
   /*user-select: none;*/
 }
 
