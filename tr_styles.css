@@ -406,29 +406,32 @@ th{
 }
 
 /* System-style confirmation toast */
+/* Header confirmation toast */
 .fare-toast{
   position: absolute;
-  left: 50%;
-  transform: translate(-50%, -10px);
+
+  right: 0;                  /* align with right side of header UI */
+  top: 50%;                  /* vertical center */
+  transform: translateY(-50%);
 
   border: 2px solid rgb(255,0,0);
   background: rgba(0,0,0,.92);
   color: rgb(255,0,0);
 
-  padding: 8px 14px;
+  padding: 6px 12px;
   font-family: sans-serif;
   font-weight: 800;
   letter-spacing: 1px;
 
   opacity: 0;
   pointer-events: none;
-  transition: opacity .15s ease, transform .15s ease;
+
+  transition: opacity .15s ease;
 }
 
-/* Visible state */
+/* visible state */
 .fare-toast.show{
   opacity: 1;
-  transform: translate(-50%, -18px);
 }
 
 /* Your existing mobile behavior can stay,
