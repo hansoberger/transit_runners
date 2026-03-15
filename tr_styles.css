@@ -387,20 +387,8 @@ th{
   flex: 1 1 0;
   text-align: center;
   white-space: nowrap;
-
-  font-family: sans-serif;   /* same as audio button */
-  font-weight: 700;          /* matches uiBtn */
-  letter-spacing: 1px;       /* cyberpunk UI spacing */
-
   font-size: 13px;
   padding: 4px 6px;
-  box-sizing: border-box;
-  cursor: pointer;
-}
-
-.fare-pill:hover{
-  background: rgb(255, 0, 0);
-  color: black;
 }
 
 /* Small cyberpunk message window */
