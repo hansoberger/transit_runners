@@ -51,27 +51,13 @@ body {
 .header #audioToggle{
   margin-left: auto;
 }
-/*.uiBtn{
-  border: 2px solid rgb(255,0,0);
-  background: rgba(0,0,0,.4);
-  color: rgb(255,0,0);
-  padding: 6px 10px;
-  font-weight: 800;
-  letter-spacing: 1px;
-  cursor: pointer;
-}*/
 .uiBtn{
   border: 2px solid rgb(255,0,0);
   background: rgba(0,0,0,.4);
   color: rgb(255,0,0);
-
-  font-family: sans-serif;
-  font-size: 16px;
+  padding: 6px 10px;
   font-weight: 800;
   letter-spacing: 1px;
-  line-height: 1;
-
-  padding: 6px 10px;
   cursor: pointer;
 }
 
@@ -402,12 +388,14 @@ th{
   flex: 1 1 0;
   text-align: center;
   white-space: nowrap;
+
+  font-family: sans-serif;   /* same as audio button */
+  font-weight: 700;          /* matches uiBtn */
+  letter-spacing: 1px;       /* cyberpunk UI spacing */
+
+  font-size: 13px;
+  padding: 4px 6px;
   box-sizing: border-box;
-
-  font: inherit;
-  letter-spacing: inherit;
-
-  padding: 6px 8px;
 }
 
 /* Small cyberpunk message window */
